@@ -14,12 +14,12 @@ import {
 } from "reactstrap";
 
 const data = [
-  { id: 1, personaje: "Dante", anime: "Devil may Cry"},
-  { id: 2, personaje: "Leon kenedy", anime: "Resident Evil" },
-  { id: 3, personaje: "Steve", anime: "Minecraft" },
-  { id: 4, personaje: "Scorpion", anime: "Mortal Kombat" },
-  { id: 5, personaje: "Master shif", anime: "HALO"},
-  { id: 6, personaje: "Ornn", anime: "LOL" },
+  { id: 1, personaje: "Dante", juego: "Devil may Cry"},
+  { id: 2, personaje: "Leon kenedy", juego: "Resident Evil" },
+  { id: 3, personaje: "Steve", juego: "Minecraft" },
+  { id: 4, personaje: "Scorpion", juego: "Mortal Kombat" },
+  { id: 5, personaje: "Master shif", juego: "HALO"},
+  { id: 6, personaje: "Ornn", juego: "LOL" },
 ];
 
 
@@ -35,7 +35,7 @@ class App extends React.Component {
       
         <Container>
         <br />
-          <Button color="success" onClick={()=>this.mostrarModalInsertar()}>Crear</Button>
+          <Button color="success">Crear</Button>
           <br />
           <br />
           <Table>
@@ -43,7 +43,7 @@ class App extends React.Component {
               <tr>
                 <th>ID</th>
                 <th>Personaje</th>
-                <th>Anime</th>
+                <th>Juego</th>
                 <th>Acción</th>
               </tr>
             </thead>
@@ -53,7 +53,7 @@ class App extends React.Component {
                 <tr key={dato.id}>
                   <td>{dato.id}</td>
                   <td>{dato.personaje}</td>
-                  <td>{dato.anime}</td>
+                  <td>{dato.juego}</td>
                   <td>
                     <Button
                       color="primary"
@@ -61,7 +61,7 @@ class App extends React.Component {
                     >
                       Editar
                     </Button>{" "}
-                    <Button color="danger" onClick={()=> this.eliminar(dato)}>Eliminar</Button>
+                    <Button color="danger">Eliminar</Button>
                   </td>
                 </tr>
               ))}
